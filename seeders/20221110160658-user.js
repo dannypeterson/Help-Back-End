@@ -1,58 +1,59 @@
-'use strict';
+'use strict'
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
       'users',
       [
         {
-          username: ,
-          email: 'demo@demo.com',
-          password: '$321!pass!123$',
+          username: 'SeafoodLover',
+          email: 'BostonFoodie@boston.com',
+          password: '1234',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          username: ,
-          email: 'demo@demo.com',
-          password: '$321!pass!123$',
+          username: 'Jan3140',
+          email: 'JanW@jan.com',
+          password: '1234',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          username: ,
-          email: 'demo@demo.com',
-          password: '$321!pass!123$',
+          username: 'PizzaFiend',
+          email: 'pizza4days@pizza.com',
+          password: '1234',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          username: ,
-          email: 'demo@demo.com',
-          password: '$321!pass!123$',
+          username: 'ClassyBites',
+          email: 'Alexj@alex.com',
+          password: '1234',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          username: ,
-          email: 'demo@demo.com',
-          password: '$321!pass!123$',
+          username: 'Out2Eat',
+          email: 'Dinner@dinner.com',
+          password: '1234',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          username: ,
-          email: 'demo@demo.com',
-          password: '$321!pass!123$',
+          username: 'CrabCakeQueen',
+          email: 'Queen@crabcakes.com',
+          password: '1234',
           createdAt: new Date(),
           updatedAt: new Date()
-        },
-      ],{}
+        }
+      ],
+      {}
     )
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete('users', null, {})
   }
-};
+}
