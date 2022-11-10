@@ -2,7 +2,7 @@ const { Restaurant } = require('../models')
 
 const GetRestaurant = async (req, res) => {
   try {
-    const restaurant = await Restaurant.findOneById()
+    const restaurant = await Restaurant.findByPk(req.params.id)
     res.send(restaurant)
   } catch (error) {
     throw error

@@ -2,6 +2,15 @@ const { Review } = require('../models')
 
 const GetReview = async (req, res) => {
   try {
+    const review = await Review.findByPk()
+    res.send(review)
+  } catch (error) {
+    throw error
+  }
+}
+
+const GetAllReviews = async (req, res) => {
+  try {
     const reviews = await Review.findAll()
     res.send(reviews)
   } catch (error) {
@@ -35,8 +44,8 @@ const DeleteReview = async (req, res) => {
     await Review.destroy({ where: { id: req.params.review_id } })
     res.send({
       msg: 'Review has been Deleted!',
-      payload: req.params.review_id,
-      status: 'OK'
+      // payload: req.params.review_id,
+      status: 'OK!'
     })
   } catch (error) {
     throw error
@@ -45,6 +54,7 @@ const DeleteReview = async (req, res) => {
 
 module.exports = {
   GetReview,
+  GetAllReviews,
   CreateReview,
   UpdateReview,
   DeleteReview
