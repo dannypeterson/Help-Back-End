@@ -11,4 +11,9 @@ const middleware = require('../middleware')
 // )
 // router.post('/register', controller.Register)
 
+router.get('/', controller.GetAllUsers)
+router.get('/:id', controller.FindUserById)
+
+router.post('/', controller.CreateUser)
+
 module.exports = router

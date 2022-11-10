@@ -13,8 +13,8 @@ app.use(cors())
 app.use(logger('dev'))
 app.use(bodyParser.json())
 
-app.use('/auth', AuthRouter)
-app.use('/reviews', ReviewRouter)
+app.use('/user', AuthRouter)
+app.use('/review', ReviewRouter)
 app.use('/restaurants', RestaurantRouter)
 
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))

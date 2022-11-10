@@ -2,7 +2,7 @@ const { Review } = require('../models')
 
 const GetReview = async (req, res) => {
   try {
-    const review = await Review.findByPk()
+    const review = await Review.findByPk(req.params.review_id)
     res.send(review)
   } catch (error) {
     throw error
