@@ -21,7 +21,7 @@ module.exports = {
       img: {
         type: Sequelize.STRING
       },
-      restauarantId: {
+      restaurantId: {
         type: Sequelize.STRING
       },
       userId: {

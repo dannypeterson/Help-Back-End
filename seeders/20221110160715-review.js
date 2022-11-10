@@ -6,11 +6,13 @@ module.exports = {
     await queryInterface.bulkInsert('reviews', [
       {
         dish: 'Umami Truffle Burger',
-        description: 'sheeeeesh this was a good burger. The truffle? Perfect.',
+        description: 'Sheeeeesh this was a good burger. The truffle? Perfect.',
         rating: 5,
         img: 'https://i.imgur.com/TDI5eVO.png',
         restaurantId: '1',
-        userId: '1'
+        userId: '1',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Half Pound Maine Lobster Roll',
@@ -19,7 +21,9 @@ module.exports = {
         rating: 5,
         img: 'https://img.cdn4dd.com/p/fit=cover,width=600,format=auto,quality=50/media/photosV2/9f04a886-b55f-4313-ad2b-1ed67e4f3760-retina-large.JPG',
         restaurantId: '3',
-        userId: '2'
+        userId: '2',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Salty Pig Pizza',
@@ -28,7 +32,9 @@ module.exports = {
         rating: 2,
         img: 'blob:https://imgur.com/ea0dd1d8-f464-4b77-ac52-220f85a1127b',
         restaurantId: '6',
-        userId: '3'
+        userId: '3',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Clam Chowder',
@@ -37,7 +43,9 @@ module.exports = {
         rating: 4,
         img: 'https://media-cdn.tripadvisor.com/media/photo-s/16/ad/1e/25/photo6jpg.jpg',
         restaurantId: '5',
-        userId: '4'
+        userId: '4',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Fried Catfish Basket',
@@ -46,7 +54,9 @@ module.exports = {
         rating: 3,
         img: 'https://cloverstatic.com/menu-assets/items/2QZ6KPWCK0EYE_576x576.jpeg',
         restaurantId: '4',
-        userId: '5'
+        userId: '5',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Hot Ones Burger',
@@ -55,7 +65,9 @@ module.exports = {
         rating: 5,
         img: 'https://d2luv1saso99wi.cloudfront.net/2022_Hot-Ones_App-Web-Menu_1500x920_Burger_lg1661364018.jpeg',
         restaurantId: '9',
-        userId: '6'
+        userId: '6',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Stifado',
@@ -64,7 +76,9 @@ module.exports = {
         rating: 4,
         img: 'https://www.danishfoodlovers.com/wp-content/uploads/2022/07/Greek-beef-stifado-5.jpg',
         restaurantId: '10',
-        userId: '7'
+        userId: '7',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Crab-Crusted Haddock',
@@ -73,7 +87,9 @@ module.exports = {
         rating: 4,
         img: 'https://citypierseafood.com/media/catalog/product/c/p/cpfcod1000-cod-loin-plated-detail_1.png',
         restaurantId: '2',
-        userId: '8'
+        userId: '8',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'A5 Wagyu Beef Foie Gras Don',
@@ -82,7 +98,9 @@ module.exports = {
         rating: 5,
         img: 'https://i.imgur.com/omkmskd.png',
         restaurantId: '7',
-        userId: '9'
+        userId: '9',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         dish: 'Sho-yu Ramen',
@@ -91,7 +109,9 @@ module.exports = {
         rating: 3,
         img: 'https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/9f5f69b4-00cb-4800-8474-17958657b726.jpg',
         restaurantId: '8',
-        userId: '10'
+        userId: '10',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ])
   },
