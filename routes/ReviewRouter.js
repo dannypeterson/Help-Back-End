@@ -1,8 +1,8 @@
 const router = require('express').Router()
-const controller = require('../controllers/PostController')
+const controller = require('../controllers/ReviewController')
 const middleware = require('../middleware')
 
-// router.get('/', controller.GetReviews)
+// router.get('/', controller.GetReview)
 // router.post(
 //   '/',
 //   middleware.stripToken,
