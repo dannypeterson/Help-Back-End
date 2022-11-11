@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING,
       rating: DataTypes.INTEGER,
       img: DataTypes.STRING,
-      restaurantId: DataTypes.STRING,
-      userId: DataTypes.STRING
+      restaurantId: DataTypes.INTEGER,
+      userId: DataTypes.INTEGER
     },
     {
       sequelize,
