@@ -1,15 +1,33 @@
 const { User } = require('../models')
 const middleware = require('../middleware')
 
-const CreateUser = async (req, res) => {
+const Register = async (req, res) => {
   try {
-    const { username, email, password } = req.body
-    const user = await User.create({ username, email, password })
+    const { email, password, name } = req.body
+    let passwordDigest = await middleware.hashPassword(password)
+    const user = await User.create({ email, passwordDigest, name })
     res.send(user)
   } catch (error) {
-    console.log(error)
+    throw error
   }
 }
+
+// const Login = async (req, res) => {
+//   try {
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
+// const CreateUser = async (req, res) => {
+//   try {
+//     const { username, email, password } = req.body
+//     const user = await User.create({ username, email, password })
+//     res.send(user)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
 
 const FindUserById = async (req, res) => {
   try {
@@ -26,7 +44,11 @@ const GetAllUsers = async (req, res) => {
 }
 
 module.exports = {
-  CreateUser,
+  // CreateUser,
   FindUserById,
-  GetAllUsers
+  GetAllUsers,
+  // Login,
+  Register
 }
+
+
