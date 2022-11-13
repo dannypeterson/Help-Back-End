@@ -9,11 +9,11 @@ const middleware = require('../middleware')
 //   middleware.verifyToken,
 //   controller.UpdatePassword
 // )
-// router.post('/register', controller.Register)
+router.post('/register', controller.Register)
 
 router.get('/', controller.GetAllUsers)
 router.get('/:id', controller.FindUserById)
 
-router.post('/', controller.CreateUser)
+// router.post('/', controller.CreateUser)
 
 module.exports = router
