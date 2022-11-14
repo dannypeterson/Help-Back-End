@@ -35,16 +35,6 @@ const Login = async (req, res) => {
   }
 }
 
-// const CreateUser = async (req, res) => {
-//   try {
-//     const { username, email, password } = req.body
-//     const user = await User.create({ username, email, password })
-//     res.send(user)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
 const FindUserById = async (req, res) => {
   try {
     const user = await User.findByPk(req.params.id)
@@ -59,10 +49,15 @@ const GetAllUsers = async (req, res) => {
   } catch (error) {}
 }
 
+const CheckSession = async (req, res) => {
+  const { payload } = res.locals
+  res.send(payload)
+}
+
 module.exports = {
-  // CreateUser,
   FindUserById,
   GetAllUsers,
   Login,
-  Register
+  Register,
+  CheckSession
 }
