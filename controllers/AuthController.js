@@ -12,6 +12,28 @@ const Register = async (req, res) => {
   }
 }
 
+const UpdatePassword = async (req, res) => {
+  try {
+    const { oldPassword, newPassword } = req.body
+    const user = await User.findByPk(req.params.user_id)
+    // const user = await User.findOne({
+    //   where: { email: req.body.email }
+    // })
+    if (
+      user &&
+      (await middleware.comparePassword(
+        user.dataValues.passwordDigest,
+        oldPassword
+      ))
+    ) {
+      let passwordDigest = await middleware.hashPassword(newPassword)
+      await user.update({ passwordDigest })
+      return res.send({ status: 'Ok', payload: user })
+    }
+    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
+  } catch (error) {}
+}
+
 const Login = async (req, res) => {
   try {
     const user = await User.findOne({
@@ -59,5 +81,6 @@ module.exports = {
   GetAllUsers,
   Login,
   Register,
+  UpdatePassword,
   CheckSession
 }

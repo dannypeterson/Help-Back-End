@@ -10,17 +10,15 @@ router.get(
   middleware.verifyToken,
   controller.CheckSession
 )
-// router.put(
-//   '/updatepassword',
-//   middleware.stripToken,
-//   middleware.verifyToken,
-//   controller.UpdatePassword
-// )
+router.put(
+  '/updatepassword/:user_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.UpdatePassword
+)
 router.post('/register', controller.Register)
 
 router.get('/', controller.GetAllUsers)
 router.get('/:id', controller.FindUserById)
-
-// router.post('/', controller.CreateUser)
 
 module.exports = router
