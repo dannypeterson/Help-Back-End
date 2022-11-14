@@ -8,20 +8,20 @@ router.get('/', controller.GetAllReviews)
 
 router.post(
   '/create',
-  // middleware.stripToken,
-  // middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.CreateReview
 )
 router.put(
   '/update/:review_id',
-  // middleware.stripToken,
-  // middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.UpdateReview
 )
 router.delete(
   '/delete/:review_id',
-  // middleware.stripToken,
-  // middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.DeleteReview
 )
 
