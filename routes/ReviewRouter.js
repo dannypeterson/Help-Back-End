@@ -3,13 +3,28 @@ const controller = require('../controllers/ReviewController')
 const middleware = require('../middleware')
 
 //get review by ID
-router.get('/:review_id', controller.GetReview)
+router.get(
+  '/:review_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.GetReview
+)
 
 //get all reviews
-router.get('/', controller.GetAllReviews)
+router.get(
+  '/',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.GetAllReviews
+)
 
 //get user reviews
-router.get('/profile/:user_id', controller.getUserReviews)
+router.get(
+  '/profile/:user_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.getUserReviews
+)
 
 //create review
 router.post(
