@@ -10,6 +10,14 @@ router.get(
   controller.GetReview
 )
 
+//get By ID for update page
+router.get(
+  '/update/:review_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.GetReview
+)
+
 //get all reviews
 router.get(
   '/',
