@@ -8,8 +8,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Review.belongsTo(models.Restaurant, { foreignKey: 'restaurantId' })
-      Review.belongsTo(models.User, { foreignKey: 'userId' })
+      Review.belongsTo(models.Restaurant, {
+        foreignKey: 'restaurant_id',
+        as: 'reviews',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
+      Review.belongsTo(models.User, {
+        foreignKey: 'user_id',
+        as: 'reviewer',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
     }
   }
   Review.init(
@@ -18,8 +28,26 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING,
       rating: DataTypes.INTEGER,
       img: DataTypes.STRING,
-      restaurantId: DataTypes.INTEGER,
-      userId: DataTypes.INTEGER
+      restaurantId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'restaurant_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'restaurants',
+          key: 'id'
+        }
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'user_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,
