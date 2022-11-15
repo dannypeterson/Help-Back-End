@@ -20,7 +20,12 @@ const GetAllReviews = async (req, res) => {
 
 const CreateReview = async (req, res) => {
   try {
-    const review = await Review.create({ ...req.body })
+    let userId = parseInt(req.params.user_id)
+    let reviewBody = {
+      user_id: userId,
+      ...req.body
+    }
+    let review = await Review.create(reviewBody)
     res.send(review)
   } catch (error) {
     throw error
@@ -52,18 +57,21 @@ const DeleteReview = async (req, res) => {
   }
 }
 
-// const getUserReviews = async (req, res) => {
-// try {
-//   let user = await Review.findAll({where: {_}})
-// } catch (error) {
-
-// }
-// }
+const getUserReviews = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_id)
+    let user = await Review.findAll({ where: { user_id: userId } })
+    res.send(user)
+  } catch (error) {
+    throw error
+  }
+}
 
 module.exports = {
   GetReview,
   GetAllReviews,
   CreateReview,
   UpdateReview,
-  DeleteReview
+  DeleteReview,
+  getUserReviews
 }
