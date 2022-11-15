@@ -52,6 +52,14 @@ const DeleteReview = async (req, res) => {
   }
 }
 
+// const getUserReviews = async (req, res) => {
+// try {
+//   let user = await Review.findAll({where: {_}})
+// } catch (error) {
+
+// }
+// }
+
 module.exports = {
   GetReview,
   GetAllReviews,
