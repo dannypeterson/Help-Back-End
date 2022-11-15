@@ -21,7 +21,7 @@ module.exports = {
       img: {
         type: Sequelize.STRING
       },
-      restaurantId: {
+      restaurant_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: 'restaurant_id',
@@ -31,7 +31,7 @@ module.exports = {
           key: 'id'
         }
       },
-      userId: {
+      user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         field: 'user_id',

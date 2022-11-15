@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING,
       rating: DataTypes.INTEGER,
       img: DataTypes.STRING,
-      restaurantId: {
+      restaurant_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         field: 'restaurant_id',
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id'
         }
       },
-      userId: {
+      user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         field: 'user_id',
