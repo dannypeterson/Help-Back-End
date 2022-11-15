@@ -1,4 +1,4 @@
-const { Review } = require('../models')
+const { Review, User } = require('../models')
 
 const GetReview = async (req, res) => {
   try {
@@ -59,9 +59,10 @@ const DeleteReview = async (req, res) => {
 
 const getUserReviews = async (req, res) => {
   try {
-    let userId = parseInt(req.params.user_id)
-    let user = await Review.findAll({ where: { user_id: userId } })
-    res.send(user)
+    const userAndReviews = await User.findByPk(req.params.user_id, {
+      include: [{ model: Review, as: 'reviews' }]
+    })
+    res.send(userAndReviews)
   } catch (error) {
     throw error
   }

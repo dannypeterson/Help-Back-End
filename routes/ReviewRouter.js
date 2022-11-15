@@ -8,6 +8,9 @@ router.get('/:review_id', controller.GetReview)
 //get all reviews
 router.get('/', controller.GetAllReviews)
 
+//get user reviews
+router.get('/profile/:user_id', controller.getUserReviews)
+
 //create review
 router.post(
   '/create/:user_id',
@@ -31,7 +34,5 @@ router.delete(
   middleware.verifyToken,
   controller.DeleteReview
 )
-
-router.get('/test', controller.getUserReviews)
 
 module.exports = router
