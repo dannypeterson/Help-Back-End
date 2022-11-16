@@ -105,7 +105,7 @@ module.exports = {
       {
         dish: 'Sho-yu Ramen',
         description:
-          'wen yunnan. I enjoyed a hot bowl of ramen while shopping on Newbury Street. I wish the prices had been lower so I could have customized my dish more. I would come back again.',
+          'I enjoyed a hot bowl of ramen while shopping on Newbury Street. I wish the prices had been lower so I could have customized my dish more. I would come back again.',
         rating: 3,
         img: 'https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/9f5f69b4-00cb-4800-8474-17958657b726.jpg',
         restaurant_id: 8,
