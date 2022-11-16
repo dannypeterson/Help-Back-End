@@ -1,4 +1,4 @@
-const { Review, User } = require('../models')
+const { Review, User, Restaurant } = require('../models')
 const restaurant = require('../models/restaurant')
 
 const GetReview = async (req, res) => {
@@ -15,8 +15,8 @@ const GetAllReviews = async (req, res) => {
   try {
     const reviews = await Review.findAll({
       include: [
-        { model: User, as: 'reviewer', attributes: ['username'] }
-        // { model: restaurant, as: 'reviews', attributes: [] }
+        { model: User, as: 'reviewer', attributes: ['username'] },
+        { model: Restaurant, as: 'reviews', attributes: ['name'] }
       ]
     })
     res.send(reviews)
