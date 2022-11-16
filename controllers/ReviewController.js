@@ -1,4 +1,5 @@
-const { Review, User } = require('../models')
+const { Review, User, Restaurant } = require('../models')
+const restaurant = require('../models/restaurant')
 
 const GetReview = async (req, res) => {
   try {
@@ -9,9 +10,15 @@ const GetReview = async (req, res) => {
   }
 }
 
+//I want to include the restaurant_id and user_id model so I can access their name, etc
 const GetAllReviews = async (req, res) => {
   try {
-    const reviews = await Review.findAll()
+    const reviews = await Review.findAll({
+      include: [
+        { model: User, as: 'reviewer', attributes: ['username'] },
+        { model: Restaurant, as: 'reviews', attributes: ['name'] }
+      ]
+    })
     res.send(reviews)
   } catch (error) {
     throw error
