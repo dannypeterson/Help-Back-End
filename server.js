@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3001
 app.use(cors())
 app.use(logger('dev'))
 
+app.get('/', (req, res) => res.json({ msg: `Server Works!` }))
 app.use('/user', AuthRouter)
 app.use('/review', ReviewRouter)
 app.use('/restaurants', RestaurantRouter)
