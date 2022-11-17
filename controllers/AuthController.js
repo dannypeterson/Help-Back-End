@@ -3,7 +3,8 @@ const middleware = require('../middleware')
 
 const Register = async (req, res) => {
   try {
-    const { username, email, password } = req.body
+    let { username, email, password } = req.body
+    console.log(req.body)
     let passwordDigest = await middleware.hashPassword(password)
     const user = await User.create({ username, email, passwordDigest })
     res.send(user)
