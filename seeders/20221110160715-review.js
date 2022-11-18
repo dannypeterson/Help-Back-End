@@ -9,8 +9,8 @@ module.exports = {
         description: 'Sheeeeesh this was a good burger. The truffle? Perfect.',
         rating: 5,
         img: 'https://i.imgur.com/TDI5eVO.png',
-        restaurant_id: 1,
-        user_id: 1,
+        restaurant_id: 3,
+        user_id: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -20,8 +20,8 @@ module.exports = {
           'Most delicious lobster roll in Boston! The freshest I have had in town, well worth the price.',
         rating: 5,
         img: 'https://img.cdn4dd.com/p/fit=cover,width=600,format=auto,quality=50/media/photosV2/9f04a886-b55f-4313-ad2b-1ed67e4f3760-retina-large.JPG',
-        restaurant_id: 3,
-        user_id: 2,
+        restaurant_id: 4,
+        user_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -31,7 +31,7 @@ module.exports = {
           'This was a weird dish. Salty pig parts on pizza? And the waiter spit on the pizza before serving it???',
         rating: 2,
         img: 'blob:https://imgur.com/ea0dd1d8-f464-4b77-ac52-220f85a1127b',
-        restaurant_id: 6,
+        restaurant_id: 2,
         user_id: 3,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -42,7 +42,7 @@ module.exports = {
           'Delicious hot cup of corn chowder. It did taste a little oversalted and I could have used more oyster crackers. All in all, a tasty dish at a historic restaurant.',
         rating: 4,
         img: 'https://media-cdn.tripadvisor.com/media/photo-s/16/ad/1e/25/photo6jpg.jpg',
-        restaurant_id: 5,
+        restaurant_id: 6,
         user_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -53,7 +53,7 @@ module.exports = {
           'I had to try this unique catfish dish! It was done well but I wish I had tried a more signature dish at this restaurant.',
         rating: 3,
         img: 'https://cloverstatic.com/menu-assets/items/2QZ6KPWCK0EYE_576x576.jpeg',
-        restaurant_id: 4,
+        restaurant_id: 5,
         user_id: 5,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -65,7 +65,7 @@ module.exports = {
         rating: 5,
         img: 'https://d2luv1saso99wi.cloudfront.net/2022_Hot-Ones_App-Web-Menu_1500x920_Burger_lg1661364018.jpeg',
         restaurant_id: 9,
-        user_id: 6,
+        user_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -86,8 +86,8 @@ module.exports = {
           'I enjoyed this interesting dish! Crab and haddock, how could you go wrong? So happy I came to this restaurant while visiting Boston.',
         rating: 4,
         img: 'https://citypierseafood.com/media/catalog/product/c/p/cpfcod1000-cod-loin-plated-detail_1.png',
-        restaurant_id: 2,
-        user_id: 4,
+        restaurant_id: 1,
+        user_id: 6,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -98,7 +98,7 @@ module.exports = {
         rating: 5,
         img: 'https://i.imgur.com/omkmskd.png',
         restaurant_id: 7,
-        user_id: 6,
+        user_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -109,7 +109,7 @@ module.exports = {
         rating: 3,
         img: 'https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/9f5f69b4-00cb-4800-8474-17958657b726.jpg',
         restaurant_id: 8,
-        user_id: 6,
+        user_id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       }
