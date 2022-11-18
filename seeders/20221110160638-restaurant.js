@@ -63,7 +63,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          name: ' Wen’s Yunnan Noodle and Ramen',
+          name: 'Wens Yunnan Noodle and Ramen',
           address: '247 Newbury St, Boston, MA 02116',
           category: 'Asian',
           img: 'https://media-cdn.tripadvisor.com/media/photo-m/1280/22/0c/b9/8b/wen-s-noodles.jpg',
